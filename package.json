@@ -8,7 +8,9 @@
     "react-scripts": "0.9.5",
     "react-router-dom": "^5.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "json-loader": "^0.5.7"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

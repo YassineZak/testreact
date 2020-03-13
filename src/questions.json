@@ -1,0 +1,45 @@
+{
+    "questions":
+        [
+            {
+                "name": "Everything in React is a",
+                "choicesOrder": "random",
+                "choices": [
+                    "Module", "Component", "Package", "Class"
+                ],
+                "correctAnswer": "Component"
+            },
+            {
+                "name": "In which directory React Components are saved ?",
+                "choicesOrder": "random",
+                "choices": [
+                    "inside js/components/", "inside vendor/components", "inside external/components", "inside vendor/"
+                ],
+                "correctAnswer": "inside js/components/"
+            },
+            {
+                "name": "How many elements does react component return ?",
+                "choicesOrder": "random",
+                "choices": [
+                    "2 elements", "1 element", "multiple elements"
+                ],
+                "correctAnswer": "multiple elements"
+            },
+            {
+                "name": "What is state in React ?",
+                "choicesOrder": "random",
+                "choices": [
+                    "a persistant storage", "an internal data store (object) of a component"
+                ],
+                "correctAnswer": "an internal data store (object) of a component"
+            },
+            {
+                "name": "What is Babel ?",
+                "choicesOrder": "random",
+                "choices": [
+                    "a transpiler", "an interpreter", "a compiler", "Both compiler and transpiler"
+                ],
+                "correctAnswer": "Both compiler and transpiler"
+            }  
+        ]        
+}

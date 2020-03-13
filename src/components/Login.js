@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {Redirect} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import './../../public/styles/Login.css'
 
 const Login = () => {
 
     const [loginValue, setValue] = useState("");
-    const [logged, setStatus] = useState(false);
+    const history = useHistory();
 
     const handleLogin = (event) => {
         setValue(event.target.value.split(' ').join(''));
@@ -20,26 +20,22 @@ const Login = () => {
             
         }else{
             localStorage.setItem('quizUser', loginValue);
-            setStatus(true);
+            history.push('/presentation')
         }
     }
 
-    if (logged){
-        return <Redirect to='/quiz'/>
+    if (localStorage.getItem('quizUser')){
+        history.push('/presentation')
     }
 
     return (
-        <div className="container">
-            <div className="wrapper fadeInDown">
-            <h1 className="d-flex justify-content-center align-self-center">Quiz ReactJs</h1>
+        
                 <div id="formContent">
                     <form onSubmit={handleSubmit}>
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" value={loginValue} onChange={handleLogin}/>
                         <input type="submit" className="fadeIn fourth" value="Log In"/>
                     </form>
                 </div>
-            </div>
-        </div>
     );
 };
 
